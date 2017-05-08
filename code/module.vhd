@@ -67,7 +67,7 @@ end component;
 component module_CU is
 	port(input:in std_logic_vector(5 downto 0);
 		 signals:out std_logic_vector(13 downto 0);
-		 clk:in std_logic);
+		 clk, rst_sig:in std_logic);
 end component;
 
 -- cache address selector component 
@@ -130,10 +130,13 @@ prev_cont_bar <= not prev_cont_value;
 compmodule: nbit_adder generic map(18) port map(current_cont_value, prev_cont_bar, '1', comp_fake_value);
 comp_bit <= comp_fake_value(16);
 
+-- Incrementrs decrementers
+plusMinus1: inc_dec_module port map(address_value, x"01", inc_dec, plus_minus1_value);
+plusMinus16: inc_dec_module port map(address_value, x"10", inc_dec, plus_minus16_value);
 
 --CU
 CU_in_signals <= failure_count_value & comp_bit &  move_done & start & ack & finish;
-modCU: module_CU port map(CU_in_signals, CU_out_signals, clk);
+modCU: module_CU port map(CU_in_signals, CU_out_signals, clk, rst);
 
 mux2_sel <= CU_out_signals(13 downto 12);
 inc_dec <= CU_out_signals(11);
@@ -155,6 +158,8 @@ done <= CU_out_signals(1);
 --intermediate signals
 direc_value_bar <= not direc_value;
 bus_value <= "0000000000" & mux1_value;
-
-
+finish <= address_value(7) and address_value(6) and
+		  address_value(5) and address_value(4) and
+	      address_value(3) and address_value(2) and
+		  address_value(1) and address_value(0);
 end module_ARC;

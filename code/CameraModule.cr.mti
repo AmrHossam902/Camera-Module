@@ -1,12 +1,4 @@
-{D:/3rd year 2nd term/VLSI/CameraModuleProject/code/module.vhd} {1 {vcom -work work -2002 -explicit {D:/3rd year 2nd term/VLSI/CameraModuleProject/code/module.vhd}
-Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Compiling entity module
--- Compiling architecture module_ARC of module
-
-} {} {}} {D:/3rd year 2nd term/VLSI/CameraModuleProject/code/bit_adder.vhd} {1 {vcom -work work -2002 -explicit {D:/3rd year 2nd term/VLSI/CameraModuleProject/code/bit_adder.vhd}
+{D:/3rd year 2nd term/VLSI/CameraModuleProject/code/bit_adder.vhd} {1 {vcom -work work -2002 -explicit {D:/3rd year 2nd term/VLSI/CameraModuleProject/code/bit_adder.vhd}
 Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -30,6 +22,15 @@ Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
 -- Compiling entity nbit_mux3x1
 -- Compiling architecture nbit_mux3x1_arc of nbit_mux3x1
 
+} {} {}} {D:/3rd year 2nd term/VLSI/CameraModuleProject/code/Cache.vhd} {1 {vcom -work work -2002 -explicit {D:/3rd year 2nd term/VLSI/CameraModuleProject/code/Cache.vhd}
+Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity CacheMemory
+-- Compiling architecture CacheMemory_ARC of CacheMemory
+
 } {} {}} {D:/3rd year 2nd term/VLSI/CameraModuleProject/code/nbit_adder.vhd} {1 {vcom -work work -2002 -explicit {D:/3rd year 2nd term/VLSI/CameraModuleProject/code/nbit_adder.vhd}
 Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
 -- Loading package STANDARD
@@ -45,6 +46,14 @@ Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
 -- Loading package std_logic_1164
 -- Compiling entity sub
 -- Compiling architecture sub_ARC of sub
+
+} {} {}} {D:/3rd year 2nd term/VLSI/CameraModuleProject/code/module_CU.vhd} {1 {vcom -work work -2002 -explicit {D:\3rd year 2nd term\VLSI\CameraModuleProject\code\module_CU.vhd}
+Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity module_CU
+-- Compiling architecture module_CU_ARC of module_CU
 
 } {} {}} {D:/3rd year 2nd term/VLSI/CameraModuleProject/code/incrementer_decrementer.vhd} {1 {vcom -work work -2002 -explicit {D:/3rd year 2nd term/VLSI/CameraModuleProject/code/incrementer_decrementer.vhd}
 Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012

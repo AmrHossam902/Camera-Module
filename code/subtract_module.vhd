@@ -29,7 +29,7 @@ END component;
 
 
 --signals
-signal B_bar, sub_mux_value : std_logic_vector(17 downto 0);
+signal B_bar : std_logic_vector(17 downto 0);
 signal Adder1_value, Adder2_value,Adder1_value_bar : std_logic_vector(17 downto 0);
 
 begin
@@ -37,8 +37,12 @@ begin
 Adder1_sub: nbit_adder generic map(18) port map(A, B_bar, '1', Adder1_value);
 Adder2_sub: nbit_adder generic map(18) port map(Adder1_value_bar, (others => '0'), '1', Adder2_value);	
 
-sub_value <= Adder2_value when Adder1_value(16) = '0'
+B_bar <= not B;
+Adder1_value_bar <= not Adder1_value;
+
+sub_value <= Adder2_value when Adder1_value(16) = '1'
 else		Adder1_value;
+
 
  	
 end sub_ARC;
