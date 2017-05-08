@@ -7,7 +7,7 @@ entity module is
 		  cache_data_in:in std_logic_vector(7 downto 0);
 		  cache_address_out: out std_logic_vector(7 downto 0); 
 		  move, start_dma, done: out std_logic;
-		  direction: out std_logic_vector(0 downto 0);
+		  direction: std_logic_vector(0 downto 0);
 		  nvm_address_out: out std_logic_vector(11 downto 0));
 end module;
 

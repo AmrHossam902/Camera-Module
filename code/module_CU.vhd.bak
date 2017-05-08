@@ -113,11 +113,11 @@ begin
 	elsif(current_state = MOVE_MTR) then
 		signals <= "00000000001001";
 	elsif(current_state = END_ALGO) then
-		signals <= "00000000000100";
+		signals <= "0000000000010";
 	elsif(current_state = SAVE_CURRENT_CONT) then
-		signals <= "00000010000000";
+		signals <= "0000001000000";
 	else
-		signals <= "00000000000000";
+		signals <= "0000000000000";
 	end if;
 end process;	
 	

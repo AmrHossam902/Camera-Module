@@ -13,4 +13,4 @@ architecture nbit_mux2x1_arc of nbit_mux2x1 is
 begin
     output <= input1 when s0 = '0' else
               input2 when s0 = '1';
-end nbit_mux2x1_arc;
+end nbit_mux2x1;

@@ -3,9 +3,9 @@ use ieee.std_logic_1164.all;
 
 
 entity inc_dec_module is
-	port(A, amount:in std_logic_vector(7 downto 0);
-		 inc_dec:in std_logic;
-		 output:out std_logic_vector(7 downto 0));
+	port(A, amount: std_logic_vector(7 downto 0);
+		 inc_dec: std_logic;
+		 output: std_logic_vector(7 downto 0));
 end inc_dec_module;
 
 

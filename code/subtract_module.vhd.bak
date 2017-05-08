@@ -1,7 +1,7 @@
 library ieee;
 use ieee.std_logic_1164.all;
 
-entity sub is
+entity sub
 	port(A, B: in std_logic_vector(17 downto 0);
 	     sub_value: out std_logic_vector(17 downto 0));
 end sub;

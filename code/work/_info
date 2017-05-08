@@ -3,3 +3,353 @@ K3
 13
 cModel Technology
 dC:\altera\12.1\modelsim_ase
+Ebit_adder
+Z0 w1493346404
+Z1 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z2 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z3 dD:\3rd year 2nd term\VLSI\CameraModuleProject\code
+Z4 8D:/3rd year 2nd term/VLSI/CameraModuleProject/code/bit_adder.vhd
+Z5 FD:/3rd year 2nd term/VLSI/CameraModuleProject/code/bit_adder.vhd
+l0
+L4
+VXgN`Z4PcTHnMU3lFdn9c_2
+Z6 OV;C;10.1b;51
+32
+Z7 !s108 1494198550.213000
+Z8 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:/3rd year 2nd term/VLSI/CameraModuleProject/code/bit_adder.vhd|
+Z9 !s107 D:/3rd year 2nd term/VLSI/CameraModuleProject/code/bit_adder.vhd|
+Z10 o-work work -2002 -explicit -O0
+Z11 tExplicit 1
+!s100 lIV0Cm[12@:k@Ti]Hhg1o3
+!i10b 1
+Abit_adder_arc
+R1
+R2
+DEx4 work 9 bit_adder 0 22 XgN`Z4PcTHnMU3lFdn9c_2
+l10
+L9
+VR0kYY6TC0?6P<8Mh@cJY30
+R6
+32
+R7
+R8
+R9
+R10
+R11
+!s100 MT4^WQhTQNXOISoO<eoH[3
+!i10b 1
+Einc_dec_module
+Z12 w1494199551
+R1
+R2
+R3
+Z13 8D:/3rd year 2nd term/VLSI/CameraModuleProject/code/incrementer_decrementer.vhd
+Z14 FD:/3rd year 2nd term/VLSI/CameraModuleProject/code/incrementer_decrementer.vhd
+l0
+L5
+VWg[2n9[=cWCj65knnW5Hc2
+R6
+32
+Z15 !s108 1494199556.268000
+Z16 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:/3rd year 2nd term/VLSI/CameraModuleProject/code/incrementer_decrementer.vhd|
+Z17 !s107 D:/3rd year 2nd term/VLSI/CameraModuleProject/code/incrementer_decrementer.vhd|
+R10
+R11
+!s100 1ajP2d:0D^:hNli:nbKT12
+!i10b 1
+Ainc_dec_module_arc
+R1
+R2
+DEx4 work 14 inc_dec_module 0 22 Wg[2n9[=cWCj65knnW5Hc2
+l23
+L12
+V>APMd6RB4Ya^0HW>2[1dm2
+R6
+32
+R15
+R16
+R17
+R10
+R11
+!s100 C?hUPjkai[oP;DKf9]dON3
+!i10b 1
+Emodule
+Z18 w1494204694
+R1
+R2
+R3
+Z19 8D:/3rd year 2nd term/VLSI/CameraModuleProject/code/module.vhd
+Z20 FD:/3rd year 2nd term/VLSI/CameraModuleProject/code/module.vhd
+l0
+L4
+V40Zkb3ia:HAC9kamZC3=M0
+R6
+32
+Z21 !s108 1494204699.379000
+Z22 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:/3rd year 2nd term/VLSI/CameraModuleProject/code/module.vhd|
+Z23 !s107 D:/3rd year 2nd term/VLSI/CameraModuleProject/code/module.vhd|
+R10
+R11
+!s100 mReG1G_XNaneY06SkE7161
+!i10b 1
+Amodule_arc
+R1
+R2
+DEx4 work 6 module 0 22 40Zkb3ia:HAC9kamZC3=M0
+l102
+L15
+V2dQP^0z8WL;BH?bWl<e]Y2
+R6
+32
+R21
+R22
+R23
+R10
+R11
+!s100 QXACkI14BGdh]Scgg:XQE1
+!i10b 1
+Emodule_cu
+Z24 w1494205427
+R1
+R2
+R3
+Z25 8D:\3rd year 2nd term\VLSI\CameraModuleProject\code\module_CU.vhd
+Z26 FD:\3rd year 2nd term\VLSI\CameraModuleProject\code\module_CU.vhd
+l0
+L4
+V0h^JC0=DFSjljAhg?6le;2
+!s100 eS8O7[>nQSjLUBdM[h5E50
+R6
+32
+!i10b 1
+Z27 !s108 1494205435.351000
+Z28 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:\3rd year 2nd term\VLSI\CameraModuleProject\code\module_CU.vhd|
+Z29 !s107 D:\3rd year 2nd term\VLSI\CameraModuleProject\code\module_CU.vhd|
+R10
+R11
+Amodule_cu_arc
+R1
+R2
+Z30 DEx4 work 9 module_cu 0 22 0h^JC0=DFSjljAhg?6le;2
+l20
+L10
+VeKW4BdL@T:4=T40gcf]013
+!s100 B^GD_aN67AXb]gJlQTeLB0
+R6
+32
+!i10b 1
+R27
+R28
+R29
+R10
+R11
+Enbit_adder
+Z31 w1494036333
+R1
+R2
+R3
+Z32 8D:/3rd year 2nd term/VLSI/CameraModuleProject/code/nbit_adder.vhd
+Z33 FD:/3rd year 2nd term/VLSI/CameraModuleProject/code/nbit_adder.vhd
+l0
+L4
+V;P8d>Kd1?1lSj@SSYK?W70
+R6
+32
+Z34 !s108 1494198555.804000
+Z35 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:/3rd year 2nd term/VLSI/CameraModuleProject/code/nbit_adder.vhd|
+Z36 !s107 D:/3rd year 2nd term/VLSI/CameraModuleProject/code/nbit_adder.vhd|
+R10
+R11
+!s100 0j@l6UDda85Nbl@QlSeda0
+!i10b 1
+Anbit_adder_arc
+R1
+R2
+DEx4 work 10 nbit_adder 0 22 ;P8d>Kd1?1lSj@SSYK?W70
+l20
+L13
+V?MHXWTnDCZ4B;Uk^7`8bJ0
+R6
+32
+R34
+R35
+R36
+R10
+R11
+!s100 Md@az`nVaSYE=LRKCL7Z:2
+!i10b 1
+Enbit_mux2x1
+Z37 w1494198530
+R1
+R2
+R3
+Z38 8D:\3rd year 2nd term\VLSI\CameraModuleProject\code\nbit_mux2x1.vhd
+Z39 FD:\3rd year 2nd term\VLSI\CameraModuleProject\code\nbit_mux2x1.vhd
+l0
+L4
+V3H[VdX5`MG76B7U;ekVJ;0
+R6
+32
+Z40 !s108 1494198535.749000
+Z41 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:\3rd year 2nd term\VLSI\CameraModuleProject\code\nbit_mux2x1.vhd|
+Z42 !s107 D:\3rd year 2nd term\VLSI\CameraModuleProject\code\nbit_mux2x1.vhd|
+R10
+R11
+!s100 []mFCLPA0dKdX7V8kNcHW3
+!i10b 1
+Anbit_mux2x1_arc
+R1
+R2
+DEx4 work 11 nbit_mux2x1 0 22 3H[VdX5`MG76B7U;ekVJ;0
+l13
+L12
+VHFeM@<kBPk^hKVn5cGT[I2
+R6
+32
+R40
+R41
+R42
+R10
+R11
+!s100 33Y?m:f=aVD@7k5ojem0K0
+!i10b 1
+Enbit_mux3x1
+Z43 w1494198506
+R1
+R2
+R3
+Z44 8D:/3rd year 2nd term/VLSI/CameraModuleProject/code/nbit_mux3x1.vhd
+Z45 FD:/3rd year 2nd term/VLSI/CameraModuleProject/code/nbit_mux3x1.vhd
+l0
+L4
+VX94D;KE^3fK>_Ynh_Ck7K2
+R6
+32
+Z46 !s108 1494198508.253000
+Z47 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:/3rd year 2nd term/VLSI/CameraModuleProject/code/nbit_mux3x1.vhd|
+Z48 !s107 D:/3rd year 2nd term/VLSI/CameraModuleProject/code/nbit_mux3x1.vhd|
+R10
+R11
+!s100 7i[GLo=<`]0P4Ee<Cg81f3
+!i10b 1
+Anbit_mux3x1_arc
+R1
+R2
+DEx4 work 11 nbit_mux3x1 0 22 X94D;KE^3fK>_Ynh_Ck7K2
+l13
+L12
+V<L5PGM9WE0]R6_USoL74;0
+R6
+32
+R46
+R47
+R48
+R10
+R11
+!s100 dIbLkWCoK==mXCaT:<?893
+!i10b 1
+Enbit_register
+Z49 w1493555021
+R1
+R2
+R3
+Z50 8D:/3rd year 2nd term/VLSI/CameraModuleProject/code/nbit_Register.vhd
+Z51 FD:/3rd year 2nd term/VLSI/CameraModuleProject/code/nbit_Register.vhd
+l0
+L4
+VbMjeC[g[V35[U^950A>XI1
+R6
+32
+Z52 !s108 1494198563.913000
+Z53 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:/3rd year 2nd term/VLSI/CameraModuleProject/code/nbit_Register.vhd|
+Z54 !s107 D:/3rd year 2nd term/VLSI/CameraModuleProject/code/nbit_Register.vhd|
+R10
+R11
+!s100 NF4aVkbkl<HccH=e38TkW0
+!i10b 1
+Anbit_register_arc
+R1
+R2
+DEx4 work 13 nbit_register 0 22 bMjeC[g[V35[U^950A>XI1
+l12
+L11
+V03D?23kS6i0OzPDQBWLgN1
+R6
+32
+R52
+R53
+R54
+R10
+R11
+!s100 ;OYgXMbfkCPENG5DnoLkm1
+!i10b 1
+Eselectdata
+Z55 w1494189012
+R1
+R2
+R3
+Z56 8D:/3rd year 2nd term/VLSI/CameraModuleProject/code/selectData.vhd
+Z57 FD:/3rd year 2nd term/VLSI/CameraModuleProject/code/selectData.vhd
+l0
+L4
+V;OLWI>ZWh1N43QfzeE6S<1
+R6
+32
+Z58 !s108 1494198542.874000
+Z59 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:/3rd year 2nd term/VLSI/CameraModuleProject/code/selectData.vhd|
+Z60 !s107 D:/3rd year 2nd term/VLSI/CameraModuleProject/code/selectData.vhd|
+R10
+R11
+!s100 1B2PHg8hz66il<NjU]@kN1
+!i10b 1
+Aselectdata_arc
+R1
+R2
+DEx4 work 10 selectdata 0 22 ;OLWI>ZWh1N43QfzeE6S<1
+l14
+L13
+VCEKf996Cc<XZEM]k<[IXL3
+R6
+32
+R58
+R59
+R60
+R10
+R11
+!s100 0i:S^bK`>801ek6`?EORd3
+!i10b 1
+Esub
+Z61 w1494199797
+R1
+R2
+R3
+Z62 8D:/3rd year 2nd term/VLSI/CameraModuleProject/code/subtract_module.vhd
+Z63 FD:/3rd year 2nd term/VLSI/CameraModuleProject/code/subtract_module.vhd
+l0
+L4
+V2L;49SzZ]2lo02`VmFiE<1
+R6
+32
+Z64 !s108 1494199799.603000
+Z65 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:/3rd year 2nd term/VLSI/CameraModuleProject/code/subtract_module.vhd|
+Z66 !s107 D:/3rd year 2nd term/VLSI/CameraModuleProject/code/subtract_module.vhd|
+R10
+R11
+!s100 =^@FL=O7N3bR=@96[SDRF3
+!i10b 1
+Asub_arc
+R1
+R2
+DEx4 work 3 sub 0 22 2L;49SzZ]2lo02`VmFiE<1
+l35
+L9
+VGVBn4W??j@UO1R;z[hPoU3
+R6
+32
+R64
+R65
+R66
+R10
+R11
+!s100 2m=BKbaToaeNcK>[0idUb1
+!i10b 1

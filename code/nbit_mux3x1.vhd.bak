@@ -14,4 +14,4 @@ begin
     output <= input1 when s = "00" else
               input2 when s = "01" else
 			  input3 when s = "10";
-end nbit_mux3x1_arc;
+end nbit_mux3x1;
