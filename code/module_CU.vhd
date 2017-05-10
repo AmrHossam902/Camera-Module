@@ -16,7 +16,7 @@ signal current_state : state_type;
 -- Input signals
 signal move_done, start, ack, finish, comp_value: std_logic;
 signal failure_count_value: std_logic;
-
+  
 begin
 
 failure_count_value <= input(5);

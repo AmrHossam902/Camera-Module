@@ -18,7 +18,7 @@ PROCESS(clk) IS
 BEGIN
 	IF rst = '1' then
 			ram <= ((others=> (others=>'0')));
-    elsif clk'event and clk='1' THEN 
+    elsif clk'event and clk='1' THEN   
           IF write_en = '1' THEN        	
 			ram(to_integer(unsigned((address)))) <= datain;  
           END IF;

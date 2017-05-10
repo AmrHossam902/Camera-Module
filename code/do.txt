@@ -134,7 +134,7 @@ force -freeze sim:/sub/B 000000000000000000 0
 run
 
 
-system
+// system
 vsim -voptargs=+acc work.system
 # vsim -voptargs=+acc work.system 
 # Loading std.standard

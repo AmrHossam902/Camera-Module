@@ -72,7 +72,7 @@ begin
 	R_Cache_addr: nbit_register GENERIC MAP (8) port map (clk,signals(1),signals(2),cache_adder_out,"00000000",cache_address_out);   
 	R_NVM_addr: nbit_register GENERIC MAP (12) port map (clk,signals(1),signals(3),NVM_address_Mux_out,x"000",NVM_address_out) ;
 	u1: nbit_adder GENERIC MAP (8)PORT MAP(cache_address_out,x"00" , '1',cache_adder_out);
-	u2: nbit_adder GENERIC MAP (12)	u2: nbit_adder GENERIC MAP (12) PORT MAP(NVM_address_out, x"010", '0',NVM_adder_out);
+	u2: nbit_adder GENERIC MAP (12) PORT MAP(NVM_address_out, x"010", '0',NVM_adder_out);
 
 	u3: mux16x1 PORT MAP(  Data_in(127 downto 120),  Data_in(119 downto 112), Data_in(111 downto 104),Data_in(103 downto 96),
 						    Data_in(95 downto 88), Data_in(87 downto 80), Data_in(79 downto 72), Data_in(71 downto 64), 

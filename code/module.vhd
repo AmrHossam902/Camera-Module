@@ -149,7 +149,8 @@ diff_enable <= CU_out_signals(5);
 nvm_address_enable <= CU_out_signals(4);
 failure_count_enable <= CU_out_signals(0);
 regs_rst <= CU_out_signals(14);
-lap_rst <= CU_out_signals(15);							   
+lap_rst <= CU_out_signals(15);
+
 
 --output signals
 direction <= direc_value;

@@ -1,10 +1,18 @@
-{D:/3rd year 2nd term/VLSI/CameraModuleProject/code/bit_adder.vhd} {1 {vcom -work work -2002 -explicit {D:/3rd year 2nd term/VLSI/CameraModuleProject/code/bit_adder.vhd}
+{D:/3rd year 2nd term/VLSI/CameraModuleProject/code/DMACU.vhd} {1 {vcom -work work -2002 -explicit {D:/3rd year 2nd term/VLSI/CameraModuleProject/code/DMACU.vhd}
 Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
--- Compiling entity bit_adder
--- Compiling architecture bit_adder_ARC of bit_adder
+-- Compiling entity DMACU
+-- Compiling architecture DMACU_ARC of DMACU
+
+} {} {}} {D:/3rd year 2nd term/VLSI/CameraModuleProject/code/mux16x1.vhd} {1 {vcom -work work -2002 -explicit {D:/3rd year 2nd term/VLSI/CameraModuleProject/code/mux16x1.vhd}
+Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity mux16x1
+-- Compiling architecture multiplexer16_1_arc of mux16x1
 
 } {} {}} {D:/3rd year 2nd term/VLSI/CameraModuleProject/code/selectData.vhd} {1 {vcom -work work -2002 -explicit {D:/3rd year 2nd term/VLSI/CameraModuleProject/code/selectData.vhd}
 Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
@@ -31,6 +39,31 @@ Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
 -- Compiling entity CacheMemory
 -- Compiling architecture CacheMemory_ARC of CacheMemory
 
+} {} {}} {D:/3rd year 2nd term/VLSI/CameraModuleProject/code/system.vhd} {1 {vcom -work work -2002 -explicit {D:/3rd year 2nd term/VLSI/CameraModuleProject/code/system.vhd}
+Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity system
+-- Compiling architecture system_ARC of system
+
+} {} {}} {D:/3rd year 2nd term/VLSI/CameraModuleProject/code/module_CU.vhd} {1 {vcom -work work -2002 -explicit {D:/3rd year 2nd term/VLSI/CameraModuleProject/code/module_CU.vhd}
+Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity module_CU
+-- Compiling architecture module_CU_ARC of module_CU
+
+} {} {}} {D:/3rd year 2nd term/VLSI/CameraModuleProject/code/NVM.vhd} {1 {vcom -work work -2002 -explicit {D:/3rd year 2nd term/VLSI/CameraModuleProject/code/NVM.vhd}
+Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity NVM
+-- Compiling architecture NVM_ARC of NVM
+
 } {} {}} {D:/3rd year 2nd term/VLSI/CameraModuleProject/code/nbit_adder.vhd} {1 {vcom -work work -2002 -explicit {D:/3rd year 2nd term/VLSI/CameraModuleProject/code/nbit_adder.vhd}
 Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
 -- Loading package STANDARD
@@ -47,21 +80,29 @@ Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
 -- Compiling entity sub
 -- Compiling architecture sub_ARC of sub
 
-} {} {}} {D:/3rd year 2nd term/VLSI/CameraModuleProject/code/module_CU.vhd} {1 {vcom -work work -2002 -explicit {D:\3rd year 2nd term\VLSI\CameraModuleProject\code\module_CU.vhd}
+} {} {}} {D:/3rd year 2nd term/VLSI/CameraModuleProject/code/bit_adder.vhd} {1 {vcom -work work -2002 -explicit {D:/3rd year 2nd term/VLSI/CameraModuleProject/code/bit_adder.vhd}
 Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
--- Compiling entity module_CU
--- Compiling architecture module_CU_ARC of module_CU
+-- Compiling entity bit_adder
+-- Compiling architecture bit_adder_ARC of bit_adder
 
-} {} {}} {D:/3rd year 2nd term/VLSI/CameraModuleProject/code/incrementer_decrementer.vhd} {1 {vcom -work work -2002 -explicit {D:/3rd year 2nd term/VLSI/CameraModuleProject/code/incrementer_decrementer.vhd}
+} {} {}} {D:/3rd year 2nd term/VLSI/CameraModuleProject/code/CameraModule.vhd} {1 {vcom -work work -2002 -explicit {D:/3rd year 2nd term/VLSI/CameraModuleProject/code/CameraModule.vhd}
 Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
--- Compiling entity inc_dec_module
--- Compiling architecture inc_dec_module_ARC of inc_dec_module
+-- Compiling entity CameraModule
+-- Compiling architecture CameraModule_ARC of CameraModule
+
+} {} {}} {D:/3rd year 2nd term/VLSI/CameraModuleProject/code/nbit_mux2x1.vhd} {1 {vcom -work work -2002 -explicit {D:/3rd year 2nd term/VLSI/CameraModuleProject/code/nbit_mux2x1.vhd}
+Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity nbit_mux2x1
+-- Compiling architecture nbit_mux2x1_arc of nbit_mux2x1
 
 } {} {}} {D:/3rd year 2nd term/VLSI/CameraModuleProject/code/nbit_Register.vhd} {1 {vcom -work work -2002 -explicit {D:/3rd year 2nd term/VLSI/CameraModuleProject/code/nbit_Register.vhd}
 Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
@@ -71,12 +112,12 @@ Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
 -- Compiling entity nbit_Register
 -- Compiling architecture nbit_Register_ARC of nbit_Register
 
-} {} {}} {D:/3rd year 2nd term/VLSI/CameraModuleProject/code/nbit_mux2x1.vhd} {1 {vcom -work work -2002 -explicit {D:\3rd year 2nd term\VLSI\CameraModuleProject\code\nbit_mux2x1.vhd}
+} {} {}} {D:/3rd year 2nd term/VLSI/CameraModuleProject/code/incrementer_decrementer.vhd} {1 {vcom -work work -2002 -explicit {D:/3rd year 2nd term/VLSI/CameraModuleProject/code/incrementer_decrementer.vhd}
 Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
--- Compiling entity nbit_mux2x1
--- Compiling architecture nbit_mux2x1_arc of nbit_mux2x1
+-- Compiling entity inc_dec_module
+-- Compiling architecture inc_dec_module_ARC of inc_dec_module
 
 } {} {}}
