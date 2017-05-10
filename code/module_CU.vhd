@@ -3,7 +3,7 @@ use ieee.std_logic_1164.all;
 
 entity module_CU is
 	port(input:in std_logic_vector(5 downto 0);
-		 signals:out std_logic_vector(13 downto 0);
+		 signals:out std_logic_vector(15 downto 0);
 		 clk, rst_sig:in std_logic);
 end module_CU;
 
@@ -81,43 +81,43 @@ end process;
 process(current_state)
 begin
 	if(current_state = RST) then
-		signals <= "00000000000000";
+		signals <= "1100000000000000";
 	elsif(current_state = IDLE) then
-		signals <= "00000000000000";
+		signals <= "0000000000000000";
 	elsif(current_state = LD_MAT) then
-		signals <= "00000000010100";
+		signals <= "0000000000010100";
 	elsif(current_state = LD_PIV) then
-		signals <= "00000100000000";
+		signals <= "0000000100000000";
 	elsif(current_state = LD_RIGHT) then
-		signals <= "01000000100000";
+		signals <= "0001000000100000";
 	elsif(current_state = ADD_DIFF1) then
-		signals <= "00000001000000";
+		signals <= "0000000001000000";
 	elsif(current_state = LD_TOP) then
-		signals <= "10101000100000";
+		signals <= "0010101000100000";
 	elsif(current_state = ADD_DIFF2) then
-		signals <= "00000001000000";
+		signals <= "0000000001000000";
 	elsif(current_state = LD_LEFT) then
-		signals <= "01101000100000";
+		signals <= "0001101000100000";
 	elsif(current_state = ADD_DIFF3) then
-		signals <= "00000001000000";
+		signals <= "0000000001000000";
 	elsif(current_state = LD_BOTTOM) then
-		signals <= "10001000100000";
+		signals <= "0010001000100000";
 	elsif(current_state = ADD_DIFF4) then
-		signals <= "00010001000000";
+		signals <= "0000010001000000";
 	elsif(current_state = SAVE_DIFF4) then
-		signals <= "00001000000000";
+		signals <= "0000001000000000";
 	elsif(current_state = COMPARE) then
-		signals <= "00000000000000";
+		signals <= "0000000000000000";
 	elsif(current_state = CHK_END) then
-		signals <= "00000000000001";
+		signals <= "0000000000000001";
 	elsif(current_state = MOVE_MTR) then
-		signals <= "00000000001001";
+		signals <= "0000000000001001";
 	elsif(current_state = END_ALGO) then
-		signals <= "00000000000100";
+		signals <= "0000000000000100";
 	elsif(current_state = SAVE_CURRENT_CONT) then
-		signals <= "00000010000000";
+		signals <= "1000000010000000";
 	else
-		signals <= "00000000000000";
+		signals <= "0000000000000000";
 	end if;
 end process;	
 	

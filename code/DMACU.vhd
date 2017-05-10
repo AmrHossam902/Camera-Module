@@ -13,9 +13,9 @@ architecture DMACU_ARC of DMACU is
 	type state_type is (rst,idle,ld_addr,write_st,inc_NVM_addr,send_ACK);
 	signal state: state_type;
 	begin
-	state_proc : process(clk,reset)
+	state_proc : process(clk)
 	begin
-		if reset='1' then
+		if reset='1' and (clk'event AND clk='1') then
 			state<=rst;
 		elsif (clk'event AND clk='1') then
 		

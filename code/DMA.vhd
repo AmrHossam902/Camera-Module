@@ -72,13 +72,13 @@ begin
 	R_Cache_addr: nbit_register GENERIC MAP (8) port map (clk,signals(1),signals(2),cache_adder_out,"00000000",cache_address_out);   
 	R_NVM_addr: nbit_register GENERIC MAP (12) port map (clk,signals(1),signals(3),NVM_address_Mux_out,x"000",NVM_address_out) ;
 	u1: nbit_adder GENERIC MAP (8)PORT MAP(cache_address_out,x"00" , '1',cache_adder_out);
-	u2: nbit_adder GENERIC MAP (12) PORT MAP(NVM_address_out, x"000", '1',NVM_adder_out);
+	u2: nbit_adder GENERIC MAP (12)	u2: nbit_adder GENERIC MAP (12) PORT MAP(NVM_address_out, x"010", '0',NVM_adder_out);
 
-	u3: mux16x1 PORT MAP(Data_in(7 downto 0),Data_in(15 downto 8),Data_in(23 downto 16),Data_in(31 downto 24),
-						 Data_in(39 downto 32),Data_in(47 downto 40),Data_in(55 downto 48),Data_in(63 downto 56),
-						 Data_in(71 downto 64),Data_in(79 downto 72),Data_in(87 downto 80),Data_in(95 downto 88),
-						 Data_in(103 downto 96), Data_in(111 downto 104), Data_in(119 downto 112), Data_in(127 downto 120),
-						 cache_address_out(3 downto 0),Data_out);
+	u3: mux16x1 PORT MAP(  Data_in(127 downto 120),  Data_in(119 downto 112), Data_in(111 downto 104),Data_in(103 downto 96),
+						    Data_in(95 downto 88), Data_in(87 downto 80), Data_in(79 downto 72), Data_in(71 downto 64), 
+						    Data_in(63 downto 56), Data_in(55 downto 48), Data_in(47 downto 40), Data_in(39 downto 32),  
+						    Data_in(31 downto 24), Data_in(23 downto 16), Data_in(15 downto 8), Data_in(7 downto 0),
+						    cache_address_out(3 downto 0),Data_out);
 						 
-	u4: nbit_mux2x1 GENERIC MAP (12) PORT MAP(NVM_addr_in,NVM_adder_out,signals(4),NVM_address_Mux_out);
+	u4: nbit_mux2x1 GENERIC MAP (12) PORT MAP(NVM_adder_out, NVM_addr_in,signals(4),NVM_address_Mux_out);
 end DMA_ARC;

@@ -66,7 +66,7 @@ end component;
 -- CU module
 component module_CU is
 	port(input:in std_logic_vector(5 downto 0);
-		 signals:out std_logic_vector(13 downto 0);
+		 signals:out std_logic_vector(15 downto 0);
 		 clk, rst_sig:in std_logic);
 end component;
 
@@ -92,25 +92,25 @@ signal direc_value, direc_value_bar: std_logic_vector(0 downto 0);
 signal mux2_sel : std_logic_vector(1 downto 0);
 signal inc_dec, address_enable, current_cont_enable, pixel_enable: std_logic;
 signal prev_cont_enable, Addout_enable, diff_enable, nvm_address_enable: std_logic;
-signal failure_count_enable: std_logic;
+signal failure_count_enable, regs_rst, lap_rst: std_logic;
 signal failure_count_value : std_logic_vector(0 downto 0);
 signal CU_in_signals: std_logic_vector(5 downto 0);
-signal CU_out_signals: std_logic_vector(13 downto 0);
+signal CU_out_signals: std_logic_vector(15 downto 0);
 
 
 
 begin
 
 --registers
-pixel_reg: nbit_Register generic map(18) port map(clk, rst, pixel_enable, bus_value, (others => '0'), pixel_value);
-diff_reg: nbit_Register generic map(18) port map(clk, rst, diff_enable, sub_module_value, (others => '0'), diff_value);
-Addout_reg: nbit_Register generic map(18) port map(clk, rst, Addout_enable, add_module_value, (others => '0'), Addout_value);
-curr_cont_reg: nbit_Register generic map(18) port map(clk, rst, current_cont_enable, Addout_value, (others => '0'), current_cont_value);
-prev_cont_reg: nbit_Register generic map(18) port map(clk, rst, prev_cont_enable, current_cont_value, (others => '0'), prev_cont_value);
-Address_reg: nbit_Register generic map(8) port map(clk, rst, address_enable, plus_minus1_value, (others => '0'), address_value);
-nvm_address_reg: nbit_Register generic map(12) port map (clk, rst, nvm_address_enable, nvm_address_in, (others => '0'), nvm_address_out);
-direc_reg: nbit_Register generic map(1) port map(clk, rst, comp_bit, direc_value_bar, "0", direc_value);
-fail_count_reg: nbit_Register generic map(1) port map(clk, rst, failure_count_enable, "1", "0",failure_count_value);
+pixel_reg: nbit_Register generic map(18) port map(clk, regs_rst, pixel_enable, bus_value, (others => '0'), pixel_value);
+diff_reg: nbit_Register generic map(18) port map(clk, regs_rst, diff_enable, sub_module_value, (others => '0'), diff_value);
+Addout_reg: nbit_Register generic map(18) port map(clk, regs_rst, Addout_enable, add_module_value, (others => '0'), Addout_value);
+curr_cont_reg: nbit_Register generic map(18) port map(clk, lap_rst , current_cont_enable, Addout_value, (others => '0'), current_cont_value);
+prev_cont_reg: nbit_Register generic map(18) port map(clk, regs_rst, prev_cont_enable, current_cont_value, (others => '0'), prev_cont_value);
+Address_reg: nbit_Register generic map(8) port map(clk, lap_rst, address_enable, plus_minus1_value, (others => '0'), address_value);
+nvm_address_reg: nbit_Register generic map(12) port map (clk, regs_rst, nvm_address_enable, nvm_address_in, (others => '0'), nvm_address_out);
+direc_reg: nbit_Register generic map(1) port map(clk, regs_rst, comp_bit, direc_value_bar, "0", direc_value);
+fail_count_reg: nbit_Register generic map(1) port map(clk, regs_rst, failure_count_enable, "1", "0",failure_count_value);
 
 
 -- muxes
@@ -148,6 +148,8 @@ Addout_enable <= CU_out_signals(6);
 diff_enable <= CU_out_signals(5);
 nvm_address_enable <= CU_out_signals(4);
 failure_count_enable <= CU_out_signals(0);
+regs_rst <= CU_out_signals(14);
+lap_rst <= CU_out_signals(15);							   
 
 --output signals
 direction <= direc_value;

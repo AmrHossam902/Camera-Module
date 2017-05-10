@@ -132,3 +132,234 @@ add wave -position insertpoint sim:/sub/*
 force -freeze sim:/sub/A 000000000000000000 0
 force -freeze sim:/sub/B 000000000000000000 0
 run
+
+
+system
+vsim -voptargs=+acc work.system
+# vsim -voptargs=+acc work.system 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.system(system_arc)
+# Loading work.cameramodule(cameramodule_arc)
+# Loading work.nbit_mux2x1(nbit_mux2x1_arc)
+# Loading ieee.numeric_std(body)
+# Loading work.cachememory(cachememory_arc)
+# Loading work.module(module_arc)
+# Loading work.nbit_register(nbit_register_arc)
+# Loading work.nbit_mux3x1(nbit_mux3x1_arc)
+# Loading work.selectdata(selectdata_arc)
+# Loading work.sub(sub_arc)
+# Loading work.nbit_adder(nbit_adder_arc)
+# Loading work.bit_adder(bit_adder_arc)
+# Loading work.inc_dec_module(inc_dec_module_arc)
+# Loading work.module_cu(module_cu_arc)
+# Loading work.dma(dma_arc)
+# Loading work.dmacu(dmacu_arc)
+# Loading work.mux16x1(multiplexer16_1_arc)
+# Loading work.nvm(nvm_arc)
+# vsim -voptargs=+acc work.system 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.system(system_arc)
+# Loading work.cameramodule(cameramodule_arc)
+# Loading work.nbit_mux2x1(nbit_mux2x1_arc)
+# Loading ieee.numeric_std(body)
+# Loading work.cachememory(cachememory_arc)
+# Loading work.module(module_arc)
+# Loading work.nbit_register(nbit_register_arc)
+# Loading work.nbit_mux3x1(nbit_mux3x1_arc)
+# Loading work.selectdata(selectdata_arc)
+# Loading work.sub(sub_arc)
+# Loading work.nbit_adder(nbit_adder_arc)
+# Loading work.bit_adder(bit_adder_arc)
+# Loading work.inc_dec_module(inc_dec_module_arc)
+# Loading work.module_cu(module_cu_arc)
+# Loading work.dma(dma_arc)
+# Loading work.dmacu(dmacu_arc)
+# Loading work.mux16x1(multiplexer16_1_arc)
+# Loading work.nvm(nvm_arc)
+# vsim -voptargs=+acc work.system 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.system(system_arc)
+# Loading work.cameramodule(cameramodule_arc)
+# Loading work.nbit_mux2x1(nbit_mux2x1_arc)
+# Loading ieee.numeric_std(body)
+# Loading work.cachememory(cachememory_arc)
+# Loading work.module(module_arc)
+# Loading work.nbit_register(nbit_register_arc)
+# Loading work.nbit_mux3x1(nbit_mux3x1_arc)
+# Loading work.selectdata(selectdata_arc)
+# Loading work.sub(sub_arc)
+# Loading work.nbit_adder(nbit_adder_arc)
+# Loading work.bit_adder(bit_adder_arc)
+# Loading work.inc_dec_module(inc_dec_module_arc)
+# Loading work.module_cu(module_cu_arc)
+# Loading work.dma(dma_arc)
+# Loading work.dmacu(dmacu_arc)
+# Loading work.mux16x1(multiplexer16_1_arc)
+# Loading work.nvm(nvm_arc)
+add wave -position insertpoint sim:/system/*
+add wave -position insertpoint sim:/system/camera_module/algo_module/*
+add wave -position insertpoint sim:/system/camera_module/DMA_module/*
+add wave -position insertpoint sim:/system/camera_module/algo_module/modCU/*
+force -freeze sim:/system/clk 1 0, 0 {50 ps} -r 100
+force -freeze sim:/system/rst 1 0
+force -freeze sim:/system/start 0 0
+force -freeze sim:/system/motor_done 0 0
+force -freeze sim:/system/nvm_input_address 000000000000 0
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /system/nvm_module
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /system/camera_module/cache
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /system/nvm_module
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /system/camera_module/cache
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /system/nvm_module
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /system/camera_module/cache
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /system/nvm_module
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /system/camera_module/cache
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /system/nvm_module
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /system/camera_module/cache
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /system/nvm_module
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /system/camera_module/cache
+mem load -skip 0 -filltype inc -filldata 0 -fillradix symbolic /system/nvm_module/ram
+mem load -skip 0 -filltype inc -filldata 0 -fillradix symbolic /system/nvm_module/ram
+add wave -position insertpoint sim:/system/camera_module/DMA_module/controlUnit/*
+run
+run
+force -freeze sim:/system/rst 0 0
+run
+force -freeze sim:/system/rst 1 0
+run
+run
+force -freeze sim:/system/rst 0 0
+run
+run
+run
+run
+run
+run
+run
+force -freeze sim:/system/camera_module/algo_module/start 1 0
+# ** Warning: (vsim-8780) Forcing /system/start as root of /system/camera_module/algo_module/start specified in the force.
+# 
+run
+# WARNING: No extended dataflow license exists
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
