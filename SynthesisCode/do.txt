@@ -1,0 +1,59 @@
+vsim -voptargs=+acc work.cameramodule
+# vsim -voptargs=+acc work.cameramodule 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.cameramodule(cameramodule_arc)
+# Loading work.nbit_mux2x1(nbit_mux2x1_arc)
+# ** Warning: (vsim-3473) Component instance "cache : CacheMemory" is not bound.
+#    Time: 0 ps  Iteration: 0  Instance: /cameramodule File: D:/3rd year 2nd term/Camera-Module/SynthesisCode/CameraModule.vhd
+# Loading work.module(module_arc)
+# Loading work.nbit_register(nbit_register_arc)
+# Loading work.nbit_mux3x1(nbit_mux3x1_arc)
+# Loading work.selectdata(selectdata_arc)
+# Loading work.sub(sub_arc)
+# Loading work.nbit_adder(nbit_adder_arc)
+# Loading work.bit_adder(bit_adder_arc)
+# Loading work.inc_dec_module(inc_dec_module_arc)
+# Loading work.module_cu(module_cu_arc)
+# Loading work.dma(dma_arc)
+# Loading work.dmacu(dmacu_arc)
+# Loading work.mux16x1(multiplexer16_1_arc)
+add wave -position insertpoint  \
+sim:/cameramodule/clk \
+sim:/cameramodule/rst \
+sim:/cameramodule/start \
+sim:/cameramodule/motor_done \
+sim:/cameramodule/nvm_input_address \
+sim:/cameramodule/nvm_input_data \
+sim:/cameramodule/zero \
+sim:/cameramodule/one \
+sim:/cameramodule/nvm_output_address \
+sim:/cameramodule/motor_direction \
+sim:/cameramodule/motor_move \
+sim:/cameramodule/done \
+sim:/cameramodule/ack_from_DMA \
+sim:/cameramodule/write_from_DMA \
+sim:/cameramodule/start_DMA_from_Module \
+sim:/cameramodule/nvm_address_from_Module \
+sim:/cameramodule/cache_address_from_DMA \
+sim:/cameramodule/cache_address_from_Module \
+sim:/cameramodule/address_to_cache \
+sim:/cameramodule/data_from_DMA \
+sim:/cameramodule/data_from_cache
+add wave -position insertpoint sim:/cameramodule/algo_module/*
+add wave -position insertpoint sim:/cameramodule/DMA_module/*
+force -freeze sim:/cameramodule/clk 1 0, 0 {50 ps} -r 100
+force -freeze sim:/cameramodule/rst 1 0
+force -freeze sim:/cameramodule/start 0 0
+force -freeze sim:/cameramodule/motor_done 0 0
+force -freeze sim:/cameramodule/nvm_input_address 000000000001 0
+force -freeze sim:/cameramodule/nvm_input_data 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001 0
+force -freeze sim:/cameramodule/zero 0 0
+force -freeze sim:/cameramodule/one 1 0
+run
+run
+run
+run
+force -freeze sim:/cameramodule/rst 0 0
+run
