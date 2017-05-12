@@ -14,7 +14,7 @@ ARCHITECTURE CacheMemory_ARC OF CacheMemory IS
 TYPE ram_type IS ARRAY(0 TO 255) of std_logic_vector(7 DOWNTO 0);
      SIGNAL ram : ram_type ;
 BEGIN
-PROCESS(clk) IS  
+PROCESS(clk, rst) IS  
 BEGIN
 	IF rst = '1' then
 			ram <= ((others=> (others=>'0')));
