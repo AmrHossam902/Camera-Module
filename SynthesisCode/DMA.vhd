@@ -7,6 +7,7 @@ port (
 		start_DMA: IN std_logic;
 		Data_in: IN std_logic_vector(127 downto 0); --NVM data
 		NVM_addr_in: IN std_logic_vector(11 downto 0); -- NVM address from cache
+		zero, one: in std_logic;
 		write_signal,Ack: OUT std_logic; --,Row_Done,Rows_Done 
 		Data_out: OUT std_logic_vector(7 downto 0); -- out to cache
 		cache_addr: OUT std_logic_vector(7 downto 0); 
@@ -61,6 +62,9 @@ signal NVM_address_out:std_logic_vector(11 downto 0);
 signal row_done:std_logic;
 signal rows_done:std_logic;
 signal signals:std_logic_vector(5 downto 0);
+signal zeros: std_logic_vector(11 downto 0);
+signal amount16: std_logic_vector(11 downto 0);
+
 begin
 	row_done<= cache_address_out(0)  AND cache_address_out(1) AND cache_address_out(2) AND cache_address_out(3);
 	rows_done<= cache_address_out(4) AND cache_address_out(5) AND cache_address_out(6) AND cache_address_out(7);
@@ -68,11 +72,15 @@ begin
 	Ack<=signals(0);
 	cache_addr<=cache_address_out;
 	NVM_addr_out<=NVM_address_out;
+	
+	zeros <= zero&zero&zero&zero&zero&zero&zero&zero&zero&zero&zero&zero;
+	amount16 <= zero&zero&zero&zero&zero&zero&zero& one &zero&zero&zero&zero;
+	
 	controlUnit: DMACU PORT MAP(clk,rst,start_DMA,rows_done,row_done,signals);
-	R_Cache_addr: nbit_register GENERIC MAP (8) port map (clk,signals(1),signals(2),cache_adder_out,"00000000",cache_address_out);   
-	R_NVM_addr: nbit_register GENERIC MAP (12) port map (clk,signals(1),signals(3),NVM_address_Mux_out,x"000",NVM_address_out) ;
-	u1: nbit_adder GENERIC MAP (8)PORT MAP(cache_address_out,x"00" , '1',cache_adder_out);
-	u2: nbit_adder GENERIC MAP (12) PORT MAP(NVM_address_out, x"010", '0',NVM_adder_out);
+	R_Cache_addr: nbit_register GENERIC MAP (8) port map (clk,signals(1),signals(2),cache_adder_out,zeros(7 downto 0),cache_address_out);   
+	R_NVM_addr: nbit_register GENERIC MAP (12) port map (clk,signals(1),signals(3),NVM_address_Mux_out, zeros ,NVM_address_out) ;
+	u1: nbit_adder GENERIC MAP (8)PORT MAP(cache_address_out,zeros(7 downto 0) , one ,cache_adder_out);
+	u2: nbit_adder GENERIC MAP (12) PORT MAP(NVM_address_out, amount16 , zero ,NVM_adder_out);
 
 	u3: mux16x1 PORT MAP(  Data_in(127 downto 120),  Data_in(119 downto 112), Data_in(111 downto 104),Data_in(103 downto 96),
 						    Data_in(95 downto 88), Data_in(87 downto 80), Data_in(79 downto 72), Data_in(71 downto 64), 
