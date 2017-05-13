@@ -1,0 +1,72 @@
+# CALIBRE-LVS DISCREPANCY VIEWER TCL FILE 
+# FILE: svdb/system.dv
+dv_start matched
+dv_cell {and02} {and02} matched
+dv_obj_count -transformed_nets {6 6} -transformed_inst {2 2} -transformed_port {2 2}
+dv_cell {and03} {and03} matched
+dv_obj_count -transformed_nets {7 7} -transformed_inst {2 2} -transformed_port {2 2}
+dv_cell {ao22} {ao22} matched
+dv_obj_count -transformed_nets {8 8} -transformed_inst {4 4} -transformed_port {1 1}
+dv_cell {ao32} {ao32} matched
+dv_obj_count -transformed_nets {9 9} -transformed_inst {4 4} -transformed_port {1 1}
+dv_cell {aoi21} {aoi21} matched
+dv_obj_count -transformed_nets {6 6} -transformed_inst {3 3} -transformed_port {1 1}
+dv_cell {aoi22} {aoi22} matched
+dv_obj_count -transformed_nets {7 7} -transformed_inst {3 3} -transformed_port {2 2}
+dv_cell {aoi221} {aoi221} matched
+dv_obj_count -transformed_nets {8 8} -transformed_inst {4 4} -transformed_port {1 1}
+dv_cell {buf02} {buf02} matched
+dv_obj_count -transformed_nets {4 4} -transformed_inst {1 1} -transformed_port {2 2}
+dv_cell {dff} {dff} matched
+dv_obj_count -transformed_nets {11 11} -transformed_inst {13 13} -transformed_port {2 2}
+dv_cell {dffr} {dffr} matched
+dv_obj_count -transformed_nets {14 14} -transformed_inst {15 15} -transformed_port {2 2}
+dv_cell {inv01} {inv01} matched
+dv_obj_count -transformed_nets {4 4} -transformed_inst {1 1} -transformed_port {2 2}
+dv_cell {inv02} {inv02} matched
+dv_obj_count -transformed_nets {4 4} -transformed_inst {1 1} -transformed_port {2 2}
+dv_cell {inv04} {inv04} matched
+dv_obj_count -transformed_nets {4 4} -transformed_inst {1 1} -transformed_port {1 1}
+dv_cell {mux21} {mux21} matched
+dv_obj_count -transformed_nets {7 7} -transformed_inst {5 5} -transformed_port {2 2}
+dv_cell {mux21_ni} {mux21_ni} matched
+dv_obj_count -transformed_nets {8 8} -transformed_inst {6 6} -transformed_port {2 2}
+dv_cell {nand02} {nand02} matched
+dv_obj_count -transformed_nets {5 5} -transformed_inst {1 1} -transformed_port {1 1}
+dv_cell {nand02_2x} {nand02_2x} matched
+dv_obj_count -transformed_nets {5 5} -transformed_inst {1 1} -transformed_port {1 1}
+dv_cell {nand03} {nand03} matched
+dv_obj_count -transformed_nets {6 6} -transformed_inst {1 1} -transformed_port {1 1}
+dv_cell {nand04} {nand04} matched
+dv_obj_count -transformed_nets {7 7} -transformed_inst {1 1} -transformed_port {2 2}
+dv_cell {nor02_2x} {nor02_2x} matched
+dv_obj_count -transformed_nets {5 5} -transformed_inst {1 1} -transformed_port {1 1}
+dv_cell {nor02ii} {nor02ii} matched
+dv_obj_count -transformed_nets {6 6} -transformed_inst {2 2} -transformed_port {1 1}
+dv_cell {nor03_2x} {nor03_2x} matched
+dv_obj_count -transformed_nets {6 6} -transformed_inst {1 1} -transformed_port {1 1}
+dv_cell {nor04} {nor04} matched
+dv_obj_count -transformed_nets {7 7} -transformed_inst {1 1} -transformed_port {2 2}
+dv_cell {oai21} {oai21} matched
+dv_obj_count -transformed_nets {6 6} -transformed_inst {3 3} -transformed_port {2 2}
+dv_cell {oai22} {oai22} matched
+dv_obj_count -transformed_nets {7 7} -transformed_inst {3 3} -transformed_port {2 2}
+dv_cell {oai221} {oai221} matched
+dv_obj_count -transformed_nets {8 8} -transformed_inst {4 4} -transformed_port {1 1}
+dv_cell {oai32} {oai32} matched
+dv_obj_count -transformed_nets {8 8} -transformed_inst {3 3} -transformed_port {1 1}
+dv_cell {or02} {or02} matched
+dv_obj_count -transformed_nets {6 6} -transformed_inst {2 2} -transformed_port {2 2}
+dv_cell {or03} {or03} matched
+dv_obj_count -transformed_nets {7 7} -transformed_inst {2 2} -transformed_port {2 2}
+dv_cell {or04} {or04} matched
+dv_obj_count -transformed_nets {8 8} -transformed_inst {2 2} -transformed_port {1 1}
+dv_cell {tri01} {tri01} matched
+dv_obj_count -transformed_nets {6 6} -transformed_inst {3 3} -transformed_port {2 2}
+dv_cell {xnor2} {xnor2} matched
+dv_obj_count -transformed_nets {6 6} -transformed_inst {4 4} -transformed_port {2 2}
+dv_cell {xor2} {xor2} matched
+dv_obj_count -transformed_nets {7 7} -transformed_inst {5 5} -transformed_port {1 1}
+dv_cell {system} {system} matched
+dv_obj_count -transformed_nets {6215 6215} -transformed_inst {8359 8359} -transformed_port {0 0}
+dv_end

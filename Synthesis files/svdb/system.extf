@@ -1,0 +1,9 @@
+# Automagically generated file: Please do not edit!
+lvs_ExtfVersion 3
+lvs_ExtRunTimes 1494711336 1494711339
+lvs_ExtOutFile RUNDIR /home/ayman/Desktop/flatten/lvs
+lvs_ExtOutFile RULES_FILE /home/ayman/Desktop/flatten/lvs/_tsmc035.calibre.rules_
+lvs_ExtInfoExtSummary {0 0 0 0 0 0 0 0 0 0 0}
+lvs_ExtInfoDfmSummary {0}
+lvs_ExtOutFile LAYOUT_NETLIST /home/ayman/Desktop/flatten/lvs/system.sp
+lvs_ExtOutFile EXTRACTION_REPORT system.lvs.report.ext

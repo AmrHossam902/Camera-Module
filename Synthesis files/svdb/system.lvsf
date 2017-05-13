@@ -1,0 +1,9 @@
+# Automagically generated file: Please do not edit!
+lvs_LvsOutFile RUNDIR /home/ayman/Desktop/flatten/lvs
+lvs_LvsfVersion 2
+lvs_LvsInputSummary {0 0 0}
+lvs_LvsComparisonSummary {3 3 0 0}
+lvs_LvsOutFile LVS_REPORT system.lvs.report
+lvs_LvsOutFile SOURCE_NETLIST /home/ayman/Desktop/flatten/lvs/system.sp
+lvs_LvsOutFile RULES_FILE /home/ayman/Desktop/flatten/lvs/_tsmc035.calibre.rules_
+lvs_LvsRunTimes 1494711339 1494711339
