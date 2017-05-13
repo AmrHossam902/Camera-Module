@@ -1,6 +1,6 @@
 //
 // Verilog description for cell system, 
-// Fri May 12 19:43:18 2017
+// Sat May 13 11:15:48 2017
 //
 // LeonardoSpectrum Level 3, 2016a.6 
 //
@@ -89,175 +89,54 @@ module system ( clk, rst, start, motor_done, nvm_input_address, zero, one, done,
                  \$dummy [8],\$dummy [9],\$dummy [10],\$dummy [11]}), .motor_direction (
                  {motor_direction[0]}), .motor_move (motor_move), .done (done)
                  ) ;
-    NVM nvm_module (.rst (nx364), .address ({nx364,nx364,nx364,nx364,nx364,nx364
-        ,nx364,nx364,nx364,nx364,nx364,nx364}), .dataout ({nvm_data_127,
-        nvm_data_126,nvm_data_125,nvm_data_124,nvm_data_123,nvm_data_122,
-        nvm_data_121,nvm_data_120,nvm_data_119,nvm_data_118,nvm_data_117,
-        nvm_data_116,nvm_data_115,nvm_data_114,nvm_data_113,nvm_data_112,
-        nvm_data_111,nvm_data_110,nvm_data_109,nvm_data_108,nvm_data_107,
-        nvm_data_106,nvm_data_105,nvm_data_104,nvm_data_103,nvm_data_102,
-        nvm_data_101,nvm_data_100,nvm_data_99,nvm_data_98,nvm_data_97,
-        nvm_data_96,nvm_data_95,nvm_data_94,nvm_data_93,nvm_data_92,nvm_data_91,
-        nvm_data_90,nvm_data_89,nvm_data_88,nvm_data_87,nvm_data_86,nvm_data_85,
-        nvm_data_84,nvm_data_83,nvm_data_82,nvm_data_81,nvm_data_80,nvm_data_79,
-        nvm_data_78,nvm_data_77,nvm_data_76,nvm_data_75,nvm_data_74,nvm_data_73,
-        nvm_data_72,nvm_data_71,nvm_data_70,nvm_data_69,nvm_data_68,nvm_data_67,
-        nvm_data_66,nvm_data_65,nvm_data_64,nvm_data_63,nvm_data_62,nvm_data_61,
-        nvm_data_60,nvm_data_59,nvm_data_58,nvm_data_57,nvm_data_56,nvm_data_55,
-        nvm_data_54,nvm_data_53,nvm_data_52,nvm_data_51,nvm_data_50,nvm_data_49,
-        nvm_data_48,nvm_data_47,nvm_data_46,nvm_data_45,nvm_data_44,nvm_data_43,
-        nvm_data_42,nvm_data_41,nvm_data_40,nvm_data_39,nvm_data_38,nvm_data_37,
-        nvm_data_36,nvm_data_35,nvm_data_34,nvm_data_33,nvm_data_32,nvm_data_31,
-        nvm_data_30,nvm_data_29,nvm_data_28,nvm_data_27,nvm_data_26,nvm_data_25,
-        nvm_data_24,nvm_data_23,nvm_data_22,nvm_data_21,nvm_data_20,nvm_data_19,
-        nvm_data_18,nvm_data_17,nvm_data_16,nvm_data_15,nvm_data_14,nvm_data_13,
-        nvm_data_12,nvm_data_11,nvm_data_10,nvm_data_9,nvm_data_8,nvm_data_7,
-        nvm_data_6,nvm_data_5,nvm_data_4,nvm_data_3,nvm_data_2,nvm_data_1,
-        nvm_data_0})) ;
-    fake_gnd ix365 (.Y (nx364)) ;
+    NVM nvm_module (.clk (clk), .rst (rst), .address ({\$dummy [0],\$dummy [1],\$dummy [2]
+                 ,\$dummy [3],\$dummy [4],\$dummy [5],\$dummy [6],\$dummy [7],
+                 \$dummy [8],\$dummy [9],\$dummy [10],\$dummy [11]}), .dataout ({
+        nvm_data_127,nvm_data_126,nvm_data_125,nvm_data_124,nvm_data_123,
+        nvm_data_122,nvm_data_121,nvm_data_120,nvm_data_119,nvm_data_118,
+        nvm_data_117,nvm_data_116,nvm_data_115,nvm_data_114,nvm_data_113,
+        nvm_data_112,nvm_data_111,nvm_data_110,nvm_data_109,nvm_data_108,
+        nvm_data_107,nvm_data_106,nvm_data_105,nvm_data_104,nvm_data_103,
+        nvm_data_102,nvm_data_101,nvm_data_100,nvm_data_99,nvm_data_98,
+        nvm_data_97,nvm_data_96,nvm_data_95,nvm_data_94,nvm_data_93,nvm_data_92,
+        nvm_data_91,nvm_data_90,nvm_data_89,nvm_data_88,nvm_data_87,nvm_data_86,
+        nvm_data_85,nvm_data_84,nvm_data_83,nvm_data_82,nvm_data_81,nvm_data_80,
+        nvm_data_79,nvm_data_78,nvm_data_77,nvm_data_76,nvm_data_75,nvm_data_74,
+        nvm_data_73,nvm_data_72,nvm_data_71,nvm_data_70,nvm_data_69,nvm_data_68,
+        nvm_data_67,nvm_data_66,nvm_data_65,nvm_data_64,nvm_data_63,nvm_data_62,
+        nvm_data_61,nvm_data_60,nvm_data_59,nvm_data_58,nvm_data_57,nvm_data_56,
+        nvm_data_55,nvm_data_54,nvm_data_53,nvm_data_52,nvm_data_51,nvm_data_50,
+        nvm_data_49,nvm_data_48,nvm_data_47,nvm_data_46,nvm_data_45,nvm_data_44,
+        nvm_data_43,nvm_data_42,nvm_data_41,nvm_data_40,nvm_data_39,nvm_data_38,
+        nvm_data_37,nvm_data_36,nvm_data_35,nvm_data_34,nvm_data_33,nvm_data_32,
+        nvm_data_31,nvm_data_30,nvm_data_29,nvm_data_28,nvm_data_27,nvm_data_26,
+        nvm_data_25,nvm_data_24,nvm_data_23,nvm_data_22,nvm_data_21,nvm_data_20,
+        nvm_data_19,nvm_data_18,nvm_data_17,nvm_data_16,nvm_data_15,nvm_data_14,
+        nvm_data_13,nvm_data_12,nvm_data_11,nvm_data_10,nvm_data_9,nvm_data_8,
+        nvm_data_7,nvm_data_6,nvm_data_5,nvm_data_4,nvm_data_3,nvm_data_2,
+        nvm_data_1,nvm_data_0})) ;
 endmodule
 
 
-module NVM ( rst, address, dataout ) ;
+module NVM ( clk, rst, address, dataout ) ;
 
+    input clk ;
     input rst ;
     input [11:0]address ;
     output [127:0]dataout ;
 
-    wire GND0, nx307;
+	reg [127:0] memory [0:4095];
 
+	integer i;
+    always @(posedge clk) begin
+        if (rst)
+		begin
+			for (i=0; i< 4096; i=i+1) memory[i] <= 127'h00000000000000000000000000000000;
+        end
+    end
 
-
-    fake_vcc ix308 (.Y (nx307)) ;
-    fake_gnd ix304 (.Y (GND0)) ;
-    tri01 tri_dataout_0 (.Y (dataout[0]), .A (nx307), .E (GND0)) ;
-    tri01 tri_dataout_1 (.Y (dataout[1]), .A (nx307), .E (GND0)) ;
-    tri01 tri_dataout_2 (.Y (dataout[2]), .A (nx307), .E (GND0)) ;
-    tri01 tri_dataout_3 (.Y (dataout[3]), .A (nx307), .E (GND0)) ;
-    tri01 tri_dataout_4 (.Y (dataout[4]), .A (nx307), .E (GND0)) ;
-    tri01 tri_dataout_5 (.Y (dataout[5]), .A (nx307), .E (GND0)) ;
-    tri01 tri_dataout_6 (.Y (dataout[6]), .A (nx307), .E (GND0)) ;
-    tri01 tri_dataout_7 (.Y (dataout[7]), .A (nx307), .E (GND0)) ;
-    tri01 tri_dataout_8 (.Y (dataout[8]), .A (nx307), .E (GND0)) ;
-    tri01 tri_dataout_9 (.Y (dataout[9]), .A (nx307), .E (GND0)) ;
-    tri01 tri_dataout_10 (.Y (dataout[10]), .A (nx307), .E (GND0)) ;
-    tri01 tri_dataout_11 (.Y (dataout[11]), .A (nx307), .E (GND0)) ;
-    tri01 tri_dataout_12 (.Y (dataout[12]), .A (nx307), .E (GND0)) ;
-    tri01 tri_dataout_13 (.Y (dataout[13]), .A (nx307), .E (GND0)) ;
-    tri01 tri_dataout_14 (.Y (dataout[14]), .A (nx307), .E (GND0)) ;
-    tri01 tri_dataout_15 (.Y (dataout[15]), .A (nx307), .E (GND0)) ;
-    tri01 tri_dataout_16 (.Y (dataout[16]), .A (nx307), .E (GND0)) ;
-    tri01 tri_dataout_17 (.Y (dataout[17]), .A (nx307), .E (GND0)) ;
-    tri01 tri_dataout_18 (.Y (dataout[18]), .A (nx307), .E (GND0)) ;
-    tri01 tri_dataout_19 (.Y (dataout[19]), .A (nx307), .E (GND0)) ;
-    tri01 tri_dataout_20 (.Y (dataout[20]), .A (nx307), .E (GND0)) ;
-    tri01 tri_dataout_21 (.Y (dataout[21]), .A (nx307), .E (GND0)) ;
-    tri01 tri_dataout_22 (.Y (dataout[22]), .A (nx307), .E (GND0)) ;
-    tri01 tri_dataout_23 (.Y (dataout[23]), .A (nx307), .E (GND0)) ;
-    tri01 tri_dataout_24 (.Y (dataout[24]), .A (nx307), .E (GND0)) ;
-    tri01 tri_dataout_25 (.Y (dataout[25]), .A (nx307), .E (GND0)) ;
-    tri01 tri_dataout_26 (.Y (dataout[26]), .A (nx307), .E (GND0)) ;
-    tri01 tri_dataout_27 (.Y (dataout[27]), .A (nx307), .E (GND0)) ;
-    tri01 tri_dataout_28 (.Y (dataout[28]), .A (nx307), .E (GND0)) ;
-    tri01 tri_dataout_29 (.Y (dataout[29]), .A (nx307), .E (GND0)) ;
-    tri01 tri_dataout_30 (.Y (dataout[30]), .A (nx307), .E (GND0)) ;
-    tri01 tri_dataout_31 (.Y (dataout[31]), .A (nx307), .E (GND0)) ;
-    tri01 tri_dataout_32 (.Y (dataout[32]), .A (nx307), .E (GND0)) ;
-    tri01 tri_dataout_33 (.Y (dataout[33]), .A (nx307), .E (GND0)) ;
-    tri01 tri_dataout_34 (.Y (dataout[34]), .A (nx307), .E (GND0)) ;
-    tri01 tri_dataout_35 (.Y (dataout[35]), .A (nx307), .E (GND0)) ;
-    tri01 tri_dataout_36 (.Y (dataout[36]), .A (nx307), .E (GND0)) ;
-    tri01 tri_dataout_37 (.Y (dataout[37]), .A (nx307), .E (GND0)) ;
-    tri01 tri_dataout_38 (.Y (dataout[38]), .A (nx307), .E (GND0)) ;
-    tri01 tri_dataout_39 (.Y (dataout[39]), .A (nx307), .E (GND0)) ;
-    tri01 tri_dataout_40 (.Y (dataout[40]), .A (nx307), .E (GND0)) ;
-    tri01 tri_dataout_41 (.Y (dataout[41]), .A (nx307), .E (GND0)) ;
-    tri01 tri_dataout_42 (.Y (dataout[42]), .A (nx307), .E (GND0)) ;
-    tri01 tri_dataout_43 (.Y (dataout[43]), .A (nx307), .E (GND0)) ;
-    tri01 tri_dataout_44 (.Y (dataout[44]), .A (nx307), .E (GND0)) ;
-    tri01 tri_dataout_45 (.Y (dataout[45]), .A (nx307), .E (GND0)) ;
-    tri01 tri_dataout_46 (.Y (dataout[46]), .A (nx307), .E (GND0)) ;
-    tri01 tri_dataout_47 (.Y (dataout[47]), .A (nx307), .E (GND0)) ;
-    tri01 tri_dataout_48 (.Y (dataout[48]), .A (nx307), .E (GND0)) ;
-    tri01 tri_dataout_49 (.Y (dataout[49]), .A (nx307), .E (GND0)) ;
-    tri01 tri_dataout_50 (.Y (dataout[50]), .A (nx307), .E (GND0)) ;
-    tri01 tri_dataout_51 (.Y (dataout[51]), .A (nx307), .E (GND0)) ;
-    tri01 tri_dataout_52 (.Y (dataout[52]), .A (nx307), .E (GND0)) ;
-    tri01 tri_dataout_53 (.Y (dataout[53]), .A (nx307), .E (GND0)) ;
-    tri01 tri_dataout_54 (.Y (dataout[54]), .A (nx307), .E (GND0)) ;
-    tri01 tri_dataout_55 (.Y (dataout[55]), .A (nx307), .E (GND0)) ;
-    tri01 tri_dataout_56 (.Y (dataout[56]), .A (nx307), .E (GND0)) ;
-    tri01 tri_dataout_57 (.Y (dataout[57]), .A (nx307), .E (GND0)) ;
-    tri01 tri_dataout_58 (.Y (dataout[58]), .A (nx307), .E (GND0)) ;
-    tri01 tri_dataout_59 (.Y (dataout[59]), .A (nx307), .E (GND0)) ;
-    tri01 tri_dataout_60 (.Y (dataout[60]), .A (nx307), .E (GND0)) ;
-    tri01 tri_dataout_61 (.Y (dataout[61]), .A (nx307), .E (GND0)) ;
-    tri01 tri_dataout_62 (.Y (dataout[62]), .A (nx307), .E (GND0)) ;
-    tri01 tri_dataout_63 (.Y (dataout[63]), .A (nx307), .E (GND0)) ;
-    tri01 tri_dataout_64 (.Y (dataout[64]), .A (nx307), .E (GND0)) ;
-    tri01 tri_dataout_65 (.Y (dataout[65]), .A (nx307), .E (GND0)) ;
-    tri01 tri_dataout_66 (.Y (dataout[66]), .A (nx307), .E (GND0)) ;
-    tri01 tri_dataout_67 (.Y (dataout[67]), .A (nx307), .E (GND0)) ;
-    tri01 tri_dataout_68 (.Y (dataout[68]), .A (nx307), .E (GND0)) ;
-    tri01 tri_dataout_69 (.Y (dataout[69]), .A (nx307), .E (GND0)) ;
-    tri01 tri_dataout_70 (.Y (dataout[70]), .A (nx307), .E (GND0)) ;
-    tri01 tri_dataout_71 (.Y (dataout[71]), .A (nx307), .E (GND0)) ;
-    tri01 tri_dataout_72 (.Y (dataout[72]), .A (nx307), .E (GND0)) ;
-    tri01 tri_dataout_73 (.Y (dataout[73]), .A (nx307), .E (GND0)) ;
-    tri01 tri_dataout_74 (.Y (dataout[74]), .A (nx307), .E (GND0)) ;
-    tri01 tri_dataout_75 (.Y (dataout[75]), .A (nx307), .E (GND0)) ;
-    tri01 tri_dataout_76 (.Y (dataout[76]), .A (nx307), .E (GND0)) ;
-    tri01 tri_dataout_77 (.Y (dataout[77]), .A (nx307), .E (GND0)) ;
-    tri01 tri_dataout_78 (.Y (dataout[78]), .A (nx307), .E (GND0)) ;
-    tri01 tri_dataout_79 (.Y (dataout[79]), .A (nx307), .E (GND0)) ;
-    tri01 tri_dataout_80 (.Y (dataout[80]), .A (nx307), .E (GND0)) ;
-    tri01 tri_dataout_81 (.Y (dataout[81]), .A (nx307), .E (GND0)) ;
-    tri01 tri_dataout_82 (.Y (dataout[82]), .A (nx307), .E (GND0)) ;
-    tri01 tri_dataout_83 (.Y (dataout[83]), .A (nx307), .E (GND0)) ;
-    tri01 tri_dataout_84 (.Y (dataout[84]), .A (nx307), .E (GND0)) ;
-    tri01 tri_dataout_85 (.Y (dataout[85]), .A (nx307), .E (GND0)) ;
-    tri01 tri_dataout_86 (.Y (dataout[86]), .A (nx307), .E (GND0)) ;
-    tri01 tri_dataout_87 (.Y (dataout[87]), .A (nx307), .E (GND0)) ;
-    tri01 tri_dataout_88 (.Y (dataout[88]), .A (nx307), .E (GND0)) ;
-    tri01 tri_dataout_89 (.Y (dataout[89]), .A (nx307), .E (GND0)) ;
-    tri01 tri_dataout_90 (.Y (dataout[90]), .A (nx307), .E (GND0)) ;
-    tri01 tri_dataout_91 (.Y (dataout[91]), .A (nx307), .E (GND0)) ;
-    tri01 tri_dataout_92 (.Y (dataout[92]), .A (nx307), .E (GND0)) ;
-    tri01 tri_dataout_93 (.Y (dataout[93]), .A (nx307), .E (GND0)) ;
-    tri01 tri_dataout_94 (.Y (dataout[94]), .A (nx307), .E (GND0)) ;
-    tri01 tri_dataout_95 (.Y (dataout[95]), .A (nx307), .E (GND0)) ;
-    tri01 tri_dataout_96 (.Y (dataout[96]), .A (nx307), .E (GND0)) ;
-    tri01 tri_dataout_97 (.Y (dataout[97]), .A (nx307), .E (GND0)) ;
-    tri01 tri_dataout_98 (.Y (dataout[98]), .A (nx307), .E (GND0)) ;
-    tri01 tri_dataout_99 (.Y (dataout[99]), .A (nx307), .E (GND0)) ;
-    tri01 tri_dataout_100 (.Y (dataout[100]), .A (nx307), .E (GND0)) ;
-    tri01 tri_dataout_101 (.Y (dataout[101]), .A (nx307), .E (GND0)) ;
-    tri01 tri_dataout_102 (.Y (dataout[102]), .A (nx307), .E (GND0)) ;
-    tri01 tri_dataout_103 (.Y (dataout[103]), .A (nx307), .E (GND0)) ;
-    tri01 tri_dataout_104 (.Y (dataout[104]), .A (nx307), .E (GND0)) ;
-    tri01 tri_dataout_105 (.Y (dataout[105]), .A (nx307), .E (GND0)) ;
-    tri01 tri_dataout_106 (.Y (dataout[106]), .A (nx307), .E (GND0)) ;
-    tri01 tri_dataout_107 (.Y (dataout[107]), .A (nx307), .E (GND0)) ;
-    tri01 tri_dataout_108 (.Y (dataout[108]), .A (nx307), .E (GND0)) ;
-    tri01 tri_dataout_109 (.Y (dataout[109]), .A (nx307), .E (GND0)) ;
-    tri01 tri_dataout_110 (.Y (dataout[110]), .A (nx307), .E (GND0)) ;
-    tri01 tri_dataout_111 (.Y (dataout[111]), .A (nx307), .E (GND0)) ;
-    tri01 tri_dataout_112 (.Y (dataout[112]), .A (nx307), .E (GND0)) ;
-    tri01 tri_dataout_113 (.Y (dataout[113]), .A (nx307), .E (GND0)) ;
-    tri01 tri_dataout_114 (.Y (dataout[114]), .A (nx307), .E (GND0)) ;
-    tri01 tri_dataout_115 (.Y (dataout[115]), .A (nx307), .E (GND0)) ;
-    tri01 tri_dataout_116 (.Y (dataout[116]), .A (nx307), .E (GND0)) ;
-    tri01 tri_dataout_117 (.Y (dataout[117]), .A (nx307), .E (GND0)) ;
-    tri01 tri_dataout_118 (.Y (dataout[118]), .A (nx307), .E (GND0)) ;
-    tri01 tri_dataout_119 (.Y (dataout[119]), .A (nx307), .E (GND0)) ;
-    tri01 tri_dataout_120 (.Y (dataout[120]), .A (nx307), .E (GND0)) ;
-    tri01 tri_dataout_121 (.Y (dataout[121]), .A (nx307), .E (GND0)) ;
-    tri01 tri_dataout_122 (.Y (dataout[122]), .A (nx307), .E (GND0)) ;
-    tri01 tri_dataout_123 (.Y (dataout[123]), .A (nx307), .E (GND0)) ;
-    tri01 tri_dataout_124 (.Y (dataout[124]), .A (nx307), .E (GND0)) ;
-    tri01 tri_dataout_125 (.Y (dataout[125]), .A (nx307), .E (GND0)) ;
-    tri01 tri_dataout_126 (.Y (dataout[126]), .A (nx307), .E (GND0)) ;
-    tri01 tri_dataout_127 (.Y (dataout[127]), .A (nx307), .E (GND0)) ;
+    assign dataout = memory[address];
+	
 endmodule
 
 
