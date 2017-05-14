@@ -1,0 +1,78 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity CameraModule is
+	port(clk, rst, start, motor_done : in std_logic;
+		 nvm_input_address: in std_logic_vector(11 downto 0);
+		 nvm_input_data: in std_logic_vector(127 downto 0);
+		 zero, one: in std_logic;
+		 nvm_output_address: out std_logic_vector(11 downto 0);
+		 motor_direction : out std_logic_vector(0 downto 0);
+		 motor_move, done : out std_logic);
+end CameraModule;
+
+architecture CameraModule_ARC of CameraModule is
+-- Components
+
+--Module
+component module is
+	port( clk, rst, ack, start, move_done: in std_logic;
+		  nvm_address_in: in std_logic_vector(11 downto 0);
+		  cache_data_in:in std_logic_vector(7 downto 0);
+		  zero, one: in std_logic;
+		  cache_address_out: out std_logic_vector(7 downto 0); 
+		  move, start_dma, done: out std_logic;
+		  direction: out std_logic_vector(0 downto 0);
+		  nvm_address_out: out std_logic_vector(11 downto 0));
+end component;
+
+
+-- Cache
+component CacheMemory IS
+ PORT (clk, rst, write_en : IN std_logic;
+	   address : IN std_logic_vector(7 DOWNTO 0);
+		datain : IN std_logic_vector(7 DOWNTO 0);
+	   dataout : OUT std_logic_vector(7 DOWNTO 0));
+END component;
+
+-- Dma
+component DMA is 
+port (
+		clk,rst: IN std_logic;
+		start_DMA: IN std_logic;
+		Data_in: IN std_logic_vector(127 downto 0); --NVM data
+		NVM_addr_in: IN std_logic_vector(11 downto 0); -- NVM address from cache
+		zero, one: in std_logic;
+		write_signal,Ack: OUT std_logic; --,Row_Done,Rows_Done 
+		Data_out: OUT std_logic_vector(7 downto 0); -- out to cache
+		cache_addr: OUT std_logic_vector(7 downto 0); 
+		NVM_addr_out: OUT std_logic_vector(11 downto 0) --out to NVM
+		
+);
+end component;
+
+
+-- Mux2x1
+component nbit_mux2x1 is
+		Generic(n: Integer :=8);
+     port(
+         input1, input2: in STD_LOGIC_VECTOR(n-1 downto 0);
+         s0 : in std_logic;
+         output : out STD_LOGIC_VECTOR(n-1 downto 0));
+end component;
+
+
+-- Signals
+signal ack_from_DMA, write_from_DMA , start_DMA_from_Module : std_logic;
+signal nvm_address_from_Module : std_logic_vector(11 downto 0);
+signal cache_address_from_DMA, cache_address_from_Module, address_to_cache: std_logic_vector(7 downto 0);
+signal data_from_DMA, data_from_cache : std_logic_vector(7 downto 0);
+begin
+
+mux: nbit_mux2x1 generic map(8) port map(cache_address_from_Module, cache_address_from_DMA, write_from_DMA, address_to_cache);
+cache: CacheMemory port map(clk, rst, write_from_DMA, address_to_cache, data_from_DMA, data_from_cache);
+
+algo_module: module port map(clk, rst, ack_from_DMA, start, motor_done, nvm_input_address, data_from_cache, zero, one, cache_address_from_Module, motor_move, start_DMA_from_Module, done, motor_direction, nvm_address_from_Module);
+DMA_module: DMA port map(clk, rst, start_DMA_from_Module, nvm_input_data, nvm_address_from_Module, zero, one, write_from_DMA, ack_from_DMA, data_from_DMA, cache_address_from_DMA, nvm_output_address); 
+
+end CameraModule_ARC;
